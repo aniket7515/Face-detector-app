@@ -21,7 +21,13 @@ while True:
 
 
     cv2.imshow('Aniket Dhokane face detection ',frame)
-    cv2.waitKey(1)
+    key=cv2.waitKey(1)
+
+    # stop if q is pressed
+    if key==81 or key==113 :
+        break
+# Release the video capture object
+webcam.release()
 
 #Must convert to gray scale the image
 
